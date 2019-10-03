@@ -21,4 +21,8 @@ export class AppComponent  {
       this.model.items.push(new TodoItem(newItem, false));
     }
   }
+
+  getItemsRealizados(){
+    return this.model.items.filter(items => items.done);
+  }
 }
