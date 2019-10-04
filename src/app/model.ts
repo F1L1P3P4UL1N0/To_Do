@@ -12,10 +12,12 @@ export class TodoItem{
   action;
   done;
   prioridade;
+  data;
 
-  constructor(action, done, prioridade){
+  constructor(action, done, prioridade, data){
     this.action = action;
     this.done = done;
     this.prioridade = prioridade;
+    this.data = data;
   }
 }

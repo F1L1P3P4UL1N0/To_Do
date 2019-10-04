@@ -17,9 +17,9 @@ export class AppComponent  {
     return this.model.items.filter(items => !items.done);
   }
 
-  addItem(newItem, prioridade){
+  addItem(newItem, prioridade, data){
     if(newItem != ""){
-      this.model.items.push(new TodoItem(newItem, false, prioridade));
+      this.model.items.push(new TodoItem(newItem, false, prioridade, data));
     }
   }
 

@@ -4,15 +4,18 @@
 
 <div class="my-1">
   <input class="form-control" #todoText/>
-  <th>Prioridade:</th>
   
+  <th>Prioridade:</th>
   <select #todoPrioridade>
     <option>alta</option>
     <option>media</option>
     <option>baixa</option>
   </select><br>
+
+<th>Prazo</th>
+  <input type="date" #todoPrazo/><br>
   
-  <button class="btn btn-primary mt-1" (click)="addItem(todoText.value, todoPrioridade.value)" >
+  <button class="btn btn-primary mt-1" (click)="addItem(todoText.value, todoPrioridade.value, todoPrazo.value)" >
     Add
   </button>
 </div>
@@ -23,6 +26,8 @@
     <tr>
       <th>Description</th>
       <th>Done</th>
+      <th></th>
+      <th>Prazo</th>
     </tr>
   </thead>
   <tbody>
@@ -34,6 +39,7 @@
           <span *ngSwitchCase="true">Yes</span>
           <span *ngSwitchDefault>No</span>
         </td>
+        <td>{{item.data}}</td>
       </ng-container>
     </tr>
   </tbody>
@@ -45,6 +51,8 @@
     <tr>
       <th>Description</th>
       <th>Done</th>
+      <th></th>
+      <th>Prazo</th>
     </tr>
   </thead>
   <tbody>
@@ -56,6 +64,7 @@
           <span *ngSwitchCase="true">Yes</span>
           <span *ngSwitchDefault>No</span>
         </td>
+        <td>{{item.data}}</td>
       </ng-container>
 
     </tr>
@@ -68,6 +77,8 @@
     <tr>
       <th>Description</th>
       <th>Done</th>
+      <th></th>
+      <th>Prazo</th>
     </tr>
   </thead>
   <tbody>
@@ -79,6 +90,7 @@
           <span *ngSwitchCase="true">Yes</span>
           <span *ngSwitchDefault>No</span>
         </td>
+        <td>{{item.data}}</td>
       </ng-container>
     </tr>
   </tbody>
