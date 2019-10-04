@@ -21,6 +21,7 @@ export class AppComponent  {
     if(newItem != ""){
       this.model.items.push(new TodoItem(newItem, false, prioridade, data));
     }
+    this.model.sortByDataItem();
   }
 
   getItemsRealizados(){
