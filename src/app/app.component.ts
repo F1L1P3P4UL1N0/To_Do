@@ -5,6 +5,7 @@ import { Model, TodoItem } from "./model";
   selector: "todo-app",
   templateUrl: './app.component.html'
 })
+
 export class AppComponent  {
   model = new Model();
 
@@ -16,9 +17,9 @@ export class AppComponent  {
     return this.model.items.filter(items => !items.done);
   }
 
-  addItem(newItem){
+  addItem(newItem, prioridade){
     if(newItem != ""){
-      this.model.items.push(new TodoItem(newItem, false));
+      this.model.items.push(new TodoItem(newItem, false, prioridade));
     }
   }
 

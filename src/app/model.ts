@@ -4,19 +4,18 @@ export class Model{
 
   constructor(){
     this.user = "Elmano";
-    this.items = [new TodoItem("Preparar aula", false),
-                  new TodoItem("Falar com Trump", false),
-                  new TodoItem("Andar 10km", false),
-                  new TodoItem("Dominar o mundo", false)]
+    this.items = []
   }
 }
 
 export class TodoItem{
   action;
   done;
+  prioridade;
 
-  constructor(action, done){
+  constructor(action, done, prioridade){
     this.action = action;
     this.done = done;
+    this.prioridade = prioridade;
   }
 }
